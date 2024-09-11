@@ -1,8 +1,11 @@
 const express = require('express')
-const server = express()
 const {ROLE} = require('./data.js')
 const {authUser, authRole, setUser} = require('./basicAuth.js')
 const projectRouter = require('./routes/projectsRoutes.js')
+
+
+const server = express()
+const port = 3000
 
 server.use(express.json())
 server.use(setUser)
@@ -20,4 +23,6 @@ server.get('/admin', authUser, authRole(ROLE.ADMIN), (req, res) => {
     res.send('Admin Page')
 })
 
-server.listen(3000)
+server.listen(port, () => {
+    console.log("Running on port: " + port)
+})

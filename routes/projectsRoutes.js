@@ -11,7 +11,7 @@ router.get('/:projectId', setProject, authUser, authGetProject, (req, res) => {
     res.json(req.project)
 })
 
-router.delete('/:producId'. setProject, authUser, authDeleteProject, (req, res) => {
+router.delete('/:producId', setProject, authUser, authDeleteProject, (req, res) => {
     res.send('Deleted Project')
 })
 
