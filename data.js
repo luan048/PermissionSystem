@@ -4,11 +4,11 @@ const ROLE = {
 }
 
 module.exports = {
-    ROLE,
+    ROLE: ROLE,
     users: [
-        {id: 1, name: 'Luan', role: 'ROLE.ADMIN'},
-        {id: 2, name: 'Pedro', role: 'ROLE.BASIC'},
-        {id: 3, name: 'Gustavo', role: 'ROLE.BASIC'}
+        {id: 1, name: 'Luan', role: ROLE.ADMIN},
+        {id: 2, name: 'Pedro', role: ROLE.BASIC},
+        {id: 3, name: 'Gustavo', role: ROLE.BASIC}
     ],
     project: [
         {id: 1, name: "Luan's Project", userId: 1},
