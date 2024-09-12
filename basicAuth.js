@@ -44,7 +44,7 @@ function setProject(req, res, next) {
 function authGetProject(req, res, next) {
     if (!canViewProject(req.user, req.project)) {
         res.status(401)
-        return res.sed('Not allowed')
+        return res.send('Not allowed')
     }
 
     next()
