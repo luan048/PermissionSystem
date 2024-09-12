@@ -12,7 +12,9 @@ function scopedProjects(user, projects) {
 }
 
 function canDeleteProject(user, project) {
-    return project.userId === user.id
+    return (
+        user.role === ROLE.ADMIN || project.userId === user.id
+    )
 }
 
 module.exports = {

@@ -1,5 +1,5 @@
 const {project, users} = require('./data.js')
-const { canViewProject, canDeleteProject } = require('./permissions/viewProject')
+const { canViewProject, canDeleteProject } = require('./permissions/viewProject.js')
 
 function setUser(req, res, next) {
     const userId = req.body.userId
